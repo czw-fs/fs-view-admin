@@ -66,7 +66,17 @@ export default {
       this.$refs.loginForm.validate(valid => {
         this.loading = false;
         if (valid) {
-          console.log("success")
+
+          //发送登录请求，并将信息放到全局总线上
+          this.$store.dispatch("Login", this.loginForm).then((res) => {
+            this.$router.push({ path: this.redirect || "/test" }).catch(() => { });
+              console.log(this.redirect)
+
+          }).catch((err) => {
+            this.loading = false;
+            console.log(err)
+          });
+
         }
       });
     }
@@ -83,28 +93,32 @@ export default {
   background-image: url("../assets/images/login-background.jpg");
   background-size: cover;
 }
-.title{
+
+.title {
   text-align: center;
   padding-bottom: 10px;
 }
+
 .login-form {
   border-radius: 6px;
   background: #ffffff;
   width: 400px;
   height: 200px;
   padding: 25px 25px 5px 25px;
+
   .el-input {
     height: 38px;
+
     input {
       height: 38px;
     }
   }
 }
+
 .login-tip {
   font-size: 13px;
   text-align: center;
   color: #bfbfbf;
 }
-
 </style>
   

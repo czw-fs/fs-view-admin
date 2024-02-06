@@ -4,12 +4,13 @@ Vue.use(Router)
 
 export const constantRoutes = [
   {
-    path: '/',
-    redirect: '/login' // 添加这一行
-  },
-  {
     path: '/login',
     component: () => import('@/views/login.vue'),
+    hidden: true
+  },
+  {
+    path: '/test',
+    component: () => import('@/views/test.vue'),
     hidden: true
   }
 
