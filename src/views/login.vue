@@ -71,7 +71,8 @@ export default {
           this.$store.dispatch("Login", this.loginForm).then((res) => {
             this.$router.push({ path: this.redirect || "/test" }).catch(() => { });
               console.log(this.redirect)
-
+              //跳转到首页
+              this.$router.push("/").catch(()=>{});
           }).catch((err) => {
             this.loading = false;
             console.log(err)

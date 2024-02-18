@@ -9,8 +9,8 @@ export const constantRoutes = [
     hidden: true
   },
   {
-    path: '/test',
-    component: () => import('@/views/test.vue'),
+    path: '/',
+    component: () => import('@/views/index.vue'),
     hidden: true
   }
 
