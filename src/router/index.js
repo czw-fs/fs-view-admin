@@ -17,7 +17,17 @@ export const constantRoutes = [
         path:'/',
         name: "首页",
         component: () => import('@/views/index.vue'),
-      }
+      },
+      {
+        path:'index1',
+        name: "首页",
+        component: () => import('@/views/index1.vue'),
+      },      
+      {
+        path:'index2',
+        name: "首页",
+        component: () => import('@/views/index2.vue'),
+      },
     ]
   }
 ]

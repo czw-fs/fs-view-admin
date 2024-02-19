@@ -7,7 +7,7 @@
 
             <el-container>
 
-                <el-header class="header">
+                <el-header class="myheader">
                     <Header></Header>
                 </el-header>
 
@@ -32,15 +32,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.header{
+.myheader{
     padding: 0;
-    background-color: pink;
+    // background-color: pink;
+    height: 50px !important; 
 }
 .main{
     padding: 0;
     position: fixed;
     left: 201px;
-    top: 60px;
+    top: 50px;
     overflow: visible;
     width: 100%;
     height: 100%;
