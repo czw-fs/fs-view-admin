@@ -28,10 +28,10 @@ const user = {
       const password = userInfo.password
       return new Promise((resolve, reject) => {
         login(username, password).then(res => {
-          console.log(res.data.token + "---login success")
+          console.log("token: " + res.data.token + "---login success")
 
           setToken(res.data.token)
-          console.log(res.data.token)
+          // console.log(res.data.token)
           commit('SET_USERID', res.data.userId)
           commit('SET_NAME', res.data.userName)
           commit('SET_TOKEN', res.data.token)

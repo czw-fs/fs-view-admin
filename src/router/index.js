@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Layout from '../layout/main.vue'
 Vue.use(Router)
 
 export const constantRoutes = [
@@ -10,10 +11,15 @@ export const constantRoutes = [
   },
   {
     path: '/',
-    component: () => import('@/views/index.vue'),
-    hidden: true
+    component: Layout,
+    children:[
+      {
+        path:'/',
+        name: "首页",
+        component: () => import('@/views/index.vue'),
+      }
+    ]
   }
-
 ]
 
 

@@ -76,10 +76,10 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
-  console.log(res.data.msg)
-  console.log(res.data.code)
-  console.log(res.data)
-  console.log(res)
+  // console.log(res.data.msg)
+  // console.log(res.data.code)
+  // console.log(res.data)
+  // console.log(res)
 
   // 未设置状态码则默认成功状态
   const code = res.data.code;
